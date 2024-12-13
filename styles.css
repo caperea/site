@@ -114,13 +114,18 @@ header.dark-mode {
 .site-logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
     text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .logo-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .site-title {
