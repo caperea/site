@@ -3,17 +3,20 @@
 // Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Load header
-    const headerPlaceholder = document.getElementById('header-placeholder');
-    if (headerPlaceholder) {
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                headerPlaceholder.innerHTML = data;
-                setupMobileMenu();
-            });
-    } else {
-        setupMobileMenu();
-    }
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+    // Load footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+
+    setupMobileMenu();
 });
 
 function setupMobileMenu() {
