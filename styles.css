@@ -83,17 +83,23 @@ header.dark-mode {
 }
 
 .main-nav {
-    padding: 1rem 0;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
 }
 
 .header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 48px;
+    height: 100%;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .nav-left {
@@ -305,36 +311,31 @@ button[type="submit"]:hover {
 
 /* Hero Section */
 .hero-section {
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
     padding: 80px 0;
     text-align: center;
 }
 
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .hero-content p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.hero-cta {
-    margin-top: 30px;
+    color: var(--secondary-color);
 }
 
 /* Featured App Section */
 .featured-app {
-    padding: 60px 0;
-    background-color: #fff;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: var(--light-gray);
+}
+
+.featured-app:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .app-showcase {
@@ -362,12 +363,12 @@ button[type="submit"]:hover {
 .app-details h2 {
     font-size: 2em;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .app-details p {
     font-size: 1.1em;
-    color: #666;
+    color: var(--secondary-color);
     margin-bottom: 20px;
     line-height: 1.6;
 }
@@ -382,14 +383,14 @@ button[type="submit"]:hover {
     margin: 10px 0;
     padding-left: 25px;
     position: relative;
-    color: #555;
+    color: var(--secondary-color);
 }
 
 .app-features li:before {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #007aff;
+    color: var(--primary-color);
 }
 
 .app-preview {
@@ -404,8 +405,7 @@ button[type="submit"]:hover {
 
 /* Other Apps Section */
 .other-apps {
-    padding: 60px 0;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
 }
 
 .apps-grid {
@@ -416,50 +416,28 @@ button[type="submit"]:hover {
 }
 
 .app-card {
-    background: #fff;
+    padding: 2rem;
+    margin: 1.5rem 0;
     border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    background-color: var(--light-gray);
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .app-card h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .app-card p {
-    color: #666;
+    color: var(--secondary-color);
     margin-bottom: 20px;
     line-height: 1.5;
-}
-
-/* Buttons */
-.button {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.button.primary {
-    background-color: #007aff;
-    color: #fff;
-}
-
-.button.primary:hover {
-    background-color: #0056b3;
-}
-
-.button.secondary {
-    background-color: #e9ecef;
-    color: #333;
-}
-
-.button.secondary:hover {
-    background-color: #dee2e6;
 }
 
 /* App List Page */
@@ -481,13 +459,12 @@ button[type="submit"]:hover {
 
 .price {
     font-weight: 500;
-    color: #666;
+    color: var(--secondary-color);
 }
 
 /* App Detail Page */
 .app-hero {
-    background-color: #f8f9fa;
-    padding: 60px 0;
+    background-color: var(--background-color);
 }
 
 .app-hero-content {
@@ -510,17 +487,17 @@ button[type="submit"]:hover {
 .app-hero-info h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .app-tagline {
     font-size: 1.2em;
-    color: #666;
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
 .app-features-section {
-    padding: 60px 0;
+    background-color: var(--light-gray);
 }
 
 .features-grid {
@@ -531,7 +508,7 @@ button[type="submit"]:hover {
 }
 
 .feature-card {
-    background: #fff;
+    background: var(--light-gray);
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -540,17 +517,16 @@ button[type="submit"]:hover {
 .feature-card h3 {
     font-size: 1.3em;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .feature-card p {
-    color: #666;
+    color: var(--secondary-color);
     line-height: 1.5;
 }
 
 .app-screenshots {
-    padding: 60px 0;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
 }
 
 .screenshot-grid {
@@ -580,14 +556,57 @@ button[type="submit"]:hover {
     margin: 10px 0;
     padding-left: 25px;
     position: relative;
-    color: #555;
+    color: var(--secondary-color);
 }
 
 .requirements-list li:before {
     content: "•";
     position: absolute;
     left: 0;
-    color: #007aff;
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button.primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.button.primary:hover {
+    background-color: #0056b3;
+}
+
+.button.secondary {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+.button.secondary:hover {
+    background-color: var(--border-color);
+}
+
+/* Copyright styles */
+.copyright {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.copyright p {
+    margin: 0;
+    opacity: 0.8;
 }
 
 /* Responsive Styles */
