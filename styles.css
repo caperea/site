@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #0080FF;
-    --secondary-color: #E0E0E0;
-    --background-color: #1A1A1A;
-    --text-color: #FFFFFF;
-    --light-gray: #2B2B2B;
+    --background-color: #1c1c1e;
+    --text-color: #ffffff;
+    --primary-color: #0a84ff;
+    --secondary-color: #86868b;
     --border-color: #333333;
+    --light-gray: #2c2c2e;
 }
 
 * {
@@ -27,15 +27,19 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .top-nav {
     background: var(--light-gray);
-    padding: 0.5rem 0;
-    font-size: 0.875rem;
+    padding: 6px 0;
+    font-size: 13px;
+    display: none;
 }
 
 .top-nav .container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
     padding: 0 2rem;
@@ -60,7 +64,6 @@ header {
 }
 
 .main-nav {
-    border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
 }
 
@@ -87,19 +90,19 @@ header {
 }
 
 .logo-icon {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 
 .site-title {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 500;
     color: var(--text-color);
+    text-decoration: none;
 }
 
-.nav-center, .nav-right {
-    display: flex;
-    gap: 2rem;
+.nav-center {
+    margin-left: 2rem;
 }
 
 nav ul {
@@ -113,10 +116,9 @@ nav ul {
 nav ul li a {
     color: var(--text-color);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
+    font-weight: 400;
+    font-size: 15px;
     transition: color 0.3s ease;
-    padding: 0.5rem 0;
 }
 
 nav ul li a:hover {
@@ -132,6 +134,10 @@ nav ul li a:hover {
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem;
+}
+
+.mobile-nav {
+    display: none;
 }
 
 /* Main Content Styles */
@@ -255,10 +261,6 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .top-nav {
-        display: none;
-    }
-
     .header-content {
         padding: 0 1rem;
     }
@@ -273,8 +275,8 @@ footer {
 
     .mobile-nav {
         display: none;
-        position: fixed;
-        top: 60px;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
         background: var(--background-color);
