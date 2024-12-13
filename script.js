@@ -2,11 +2,11 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    const nav = document.querySelector('nav');
+    const mobileNav = document.querySelector('.mobile-nav');
 
-    if (mobileMenuButton && nav) {
+    if (mobileMenuButton && mobileNav) {
         mobileMenuButton.addEventListener('click', function() {
-            nav.classList.toggle('active');
+            mobileNav.classList.toggle('active');
         });
     }
 });
