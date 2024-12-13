@@ -222,6 +222,187 @@ button[type="submit"]:hover {
     background-color: #0070e0;
 }
 
+/* Hero Section */
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-cta {
+    margin-top: 30px;
+}
+
+/* Featured App Section */
+.featured-app {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.app-showcase {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.app-info {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.app-icon {
+    width: 128px;
+    height: 128px;
+    border-radius: 22px;
+}
+
+.app-details {
+    flex: 1;
+}
+
+.app-details h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.app-details p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.app-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.app-features li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.app-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #007aff;
+}
+
+.app-preview {
+    flex: 1;
+}
+
+.app-screenshot {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Other Apps Section */
+.other-apps {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.app-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.app-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.app-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button.primary {
+    background-color: #007aff;
+    color: #fff;
+}
+
+.button.primary:hover {
+    background-color: #0056b3;
+}
+
+.button.secondary {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.button.secondary:hover {
+    background-color: #dee2e6;
+}
+
+/* App List Page */
+.app-list {
+    padding: 60px 0;
+}
+
+.app-card-content {
+    text-align: center;
+}
+
+.app-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.price {
+    font-weight: 500;
+    color: #666;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .header-content {
@@ -279,5 +460,28 @@ button[type="submit"]:hover {
 
     section h2 {
         font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-showcase {
+        flex-direction: column;
+    }
+
+    .app-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-icon {
+        margin: 0 auto;
+    }
+
+    .app-features {
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
     }
 }
