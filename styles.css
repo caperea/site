@@ -403,6 +403,112 @@ button[type="submit"]:hover {
     color: #666;
 }
 
+/* App Detail Page */
+.app-hero {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.app-hero-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.app-hero-icon {
+    width: 192px;
+    height: 192px;
+    border-radius: 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.app-hero-info {
+    flex: 1;
+}
+
+.app-hero-info h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.app-tagline {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.app-features-section {
+    padding: 60px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.app-screenshots {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.screenshot {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.app-requirements {
+    padding: 60px 0;
+}
+
+.requirements-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.requirements-list li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.requirements-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007aff;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .header-content {
@@ -483,5 +589,21 @@ button[type="submit"]:hover {
 
     .hero-content h1 {
         font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-hero-icon {
+        width: 128px;
+        height: 128px;
+    }
+
+    .screenshot-grid {
+        grid-template-columns: 1fr;
     }
 }
