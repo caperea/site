@@ -192,11 +192,17 @@ footer {
     margin: 0 auto;
 }
 
+.app-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
 .app-icon {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -244,13 +250,16 @@ footer {
 
 .screenshot-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
 }
 
 .app-screenshot {
     width: 100%;
+    height: auto;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
