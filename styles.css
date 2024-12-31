@@ -609,6 +609,58 @@ button[type="submit"]:hover {
     background-color: var(--border-color);
 }
 
+/* Footer Styles */
+.site-footer {
+    background-color: var(--background-color);
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Dark mode support for footer */
+body.dark-mode .site-footer {
+    background-color: var(--dark-background-color);
+    border-top: 1px solid var(--dark-border-color);
+}
+
+body.dark-mode .footer-links a {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .footer-links a:hover {
+    color: var(--dark-primary-color);
+}
+
+body.dark-mode .copyright {
+    color: var(--dark-secondary-color);
+}
+
 /* Copyright styles */
 .site-footer {
     background-color: var(--background-color);
